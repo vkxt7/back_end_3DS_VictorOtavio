@@ -8,8 +8,9 @@ time [5]
 time [6] = "Victor" // atribuição dinamicos
 
 for (const jogador of time) {
-    console.log (jogador )
-    
+    if (jogador != undefined) {
+        console.log (jogador)
+    }
 }
 
 console.log (time)
