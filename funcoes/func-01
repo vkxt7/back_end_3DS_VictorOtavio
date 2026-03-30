@@ -1,0 +1,16 @@
+// Funções são blocos de códigos reaproveitáveis 
+// Podem ou Não receber parâmetros 
+// Podem ou não retornar valores
+
+// Declaração 
+function diz0la() {
+    console.log ("Olá")
+}
+function olaPessoas(nome) {
+    console.log  ("Olá, " + nome)
+}
+
+// Inovação
+diz0la()
+olaPessoas ("Luana")
+olaPessoas ("Mano")
