@@ -11,4 +11,3 @@ const minhasSobras = sobraDoSalario (1700.00)
 
 console.log (sobraDoSalario(10000.0))
 
-console.log (meuSalario (5000.0))
