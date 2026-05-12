@@ -1,0 +1,3 @@
+const dano = require('./utils-game')
+
+console.log (dano.danoJogador("canivete", 30))
