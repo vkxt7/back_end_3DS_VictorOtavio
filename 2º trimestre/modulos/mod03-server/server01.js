@@ -4,13 +4,20 @@ const porta = 8002
 const server = http.createServer((req, res)=>{
     const novaUrl = new URL (req.url, `http://${req.headers.host}`)
     const caminhoUrl = novaUrl.pathname
-    if(caminhoUrl === '/'){
- // o que vam da url?
- res.statusCode = "201"
- // res.setHeader ('Constent-Type', 'text/plain')
- res.setHeader ('Content-Type', 'text/html; charset=utf-8')
- res.end ('<h3> HTML Rocks!</H3>')
-    } else {
+    if (caminhoUrl === '/'){
+        // o que vem da url?
+        res.statusCode = '200'
+        res.setHeader ('Content-Type', 'text/html; charset=utf-8')
+        return res.end (FileSystem.readFilesync (home, 'uft-8')) // chama url
+    }
+
+    if (caminhoUrl === '/sobre'){
+        // o que vem da url?
+        res.statusCode = '200'
+        res.setHeader ('Content-Type', 'text/html; charset=utf-8')
+        return res.end (FileSystem.readFilesync (sobre, 'uft-8')) // chama url
+    }
+    else {
 res.statusCode = "401"
  res.setHeader ('Content-Type', 'text/html; charset=utf-8')
  res.end ('<h3> 401 Não autorizado</H3>')
